@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>hotglue + Cumul.io demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+
+    <!-- Meta -->
+    <meta name="description" content="Combining Cumul.io's embedded analytics platform with a hotglue Quickbooks data integration pipeline.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recipes.hotglue.xyz/demos/cumul-io.html">
+    <meta property="og:site_name" content="hotglue recipes">
+    <meta property="og:image" content="https://recipes.hotglue.xyz/demos/assets/img/cumul-io.png">
+    <meta property="og:description"
+        content="Combining Cumul.io's embedded analytics platform with a hotglue Quickbooks data integration pipeline.">
+    <meta property="og:locale" content="en-US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@hotgluexyz">
+    <meta name="twitter:title" content="hotglue recipes">
+    <meta name="twitter:description"
+        content="Combining Cumul.io's embedded analytics platform with a hotglue Quickbooks data integration pipeline.">
+
+    <!-- Begin loading animation -->
+    <link href="assets/css/loaders/loader-pulse.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- End loading animation -->
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">
+    <!-- hotglue widget -->
+    <script src="https://qa.hotglue.xyz/widget.js"></script>
+    <script>
+        HotGlue.mount({
+            "api_key": "IJuPPhOmMpaMG4Oszs0Qj3ZmOp8NzgWMaZwZk9Wd",
+            "env_id": "dev.xyz.com"
+        });
+    </script>
+    <!-- cumul.io -->
+    <script type="text/javascript"> 
+    (function(a,e,f,g,b,c,d) {a[b]||(c=e.createElement(f),c.async=1,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d));a[b]=a[b]||{};a[b].addDashboard=a[b].addDashboard||function(c){(a[b].list=a[b].list||[]).push(c)}})(window,document,'script','https://cdn-a.cumul.io/js/cumulio.min.js','Cumulio'); 
+    
+    Cumulio.addDashboard({ 
+    dashboardId: '6b656431-57ef-4e5a-828b-ccf7003a94cd', 
+    container: '#my-dashboard-591', 
+    key: '08b20bac-d3cb-4d0c-8edb-78ec177e42fc', 
+    token: 'YiNVRWeVvDDCJjEStkWz6McS04TXeDyV7gUMGgTtXsN6UYqwJbFswamWcZu9WRB3S7Jys0ZUUWsYEQV7KhaHUdFWAGbtpR19JXvG6wH1g1tKcNHr76RKNoFVYV6MOc4ycFOjczPQywU6JIN2VOrBJX'
+    }); 
+    </script>
+</head>
+
+<body>
+<div class="loader">
+    <div class="loading-animation"></div>
+</div>
+
+
+<section class="text-white p-0 o-hidden" style="background: rgb(38, 39, 50);">
+    <div class="container d-flex flex-column justify-content-between text-center py-4 py-md-5">
+        <div class="my-5">
+            <div class="row section-title justify-content-center text-center">
+                <div class="col-md-9 col-lg-8 col-xl-7">
+                    <h1 class="display-3">Demo application</h1>
+                    <div class="lead">A plain web app showing the power of <a href="https://cumul.io" style="color:#FFA500;" target="_blank">Cumul.io</a> + <a href="https://hotglue.xyz" target="_blank" style="color:#fa5240;">hotglue</a>.</div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <button class="btn btn-lg btn-primary" onclick="HotGlue.show('test-user', {'demo': true})" style="margin-right:15px;">
+                        <span>Open widget</span>
+                    </button>
+                    <button class="btn btn-lg btn-secondary" onclick="Cumulio.refreshData()">
+                        <span>Refresh data</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="my-dashboard-591" style="background: rgb(38, 39, 50);"></div>
+
+<!-- Required vendor scripts (Do not remove) -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<!-- Removes page load animation when window is finished loading -->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        document.querySelector('body').classList.add('loaded');
+    });
+</script>
+
+</body>
+
+</html>
