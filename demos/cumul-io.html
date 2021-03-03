@@ -70,7 +70,17 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <button class="btn btn-lg btn-primary" onclick="HotGlue.show('test-user', {'demo': true})" style="margin-right:15px;">
+                    <script>
+                        function launchHG() {
+                            HotGlue.show('test-user', {
+                                'demo': true,
+                                filter: {
+                                    flowFilter: (f) => f.name === "Invoices"
+                                }
+                            });
+                        }
+                    </script>
+                    <button class="btn btn-lg btn-primary" onclick="launchHG()" style="margin-right:15px;">
                         <span>Open widget</span>
                     </button>
                     <button class="btn btn-lg btn-secondary" onclick="Cumulio.refreshData()">
