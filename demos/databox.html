@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>hotglue + Databox demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon.ico"/>
+
+    <!-- Meta -->
+    <meta name="description" content="Using hotglue to import data directly to Databox.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://recipes.hotglue.xyz/demos/databox.html">
+    <meta property="og:site_name" content="hotglue recipes">
+    <meta property="og:image" content="https://recipes.hotglue.xyz/demos/assets/img/databox.png">
+    <meta property="og:description"
+        content="Using hotglue to import data directly to Databox.">
+    <meta property="og:locale" content="en-US">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@hotgluexyz">
+    <meta name="twitter:title" content="hotglue recipes">
+    <meta name="twitter:description"
+        content="Using hotglue to import data directly to Databox.">
+
+    <!-- Begin loading animation -->
+    <link href="assets/css/loaders/loader-pulse.css" rel="stylesheet" type="text/css" media="all"/>
+    <!-- End loading animation -->
+    <link href="assets/css/theme.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&display=swap" rel="stylesheet">
+    <!-- hotglue widget -->
+    <script src="https://hotglue.xyz/widget.js"></script>
+    <script>
+        HotGlue.mount({
+            "api_key": "75AAdiMHmq1kPqbgyjlHL3QRw8HIzgPP2cXZBiUZ",
+            "env_id": "databox.recipes.hotglue.xyz"
+        });
+    </script>
+
+    <!-- Swal -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- Crisp Chat -->
+    <script type="text/javascript">window.$crisp = [];
+        window.CRISP_WEBSITE_ID = "c5605949-af63-4928-a801-e500d437f9e9";
+        (function () {
+            d = document;
+            s = d.createElement("script");
+            s.src = "https://client.crisp.chat/l.js";
+            s.async = 1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+</head>
+
+<body>
+<div class="loader">
+    <div class="loading-animation"></div>
+</div>
+
+
+<section class="text-white p-0 o-hidden" style="background: rgb(38, 39, 50);height: 100vh;">
+    <div class="container d-flex flex-column justify-content-between text-center py-4 py-md-5">
+        <div class="my-5">
+            <div class="row section-title justify-content-center text-center">
+                <div class="col-md-9 col-lg-8 col-xl-7">
+                    <h1 class="display-3">Demo application</h1>
+                    <div class="lead">A plain web app showing the power of <a href="https://hotglue.xyz" target="_blank" style="color:#fa5240;">hotglue</a> + <a href="https://databox.com" style="color:#1d9ad6;" target="_blank">Databox</a>.</div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <script>
+                        function launchHG() {
+                            if (!window.$crisp) {
+                                window.swal("Error", "Uh-oh! There was an error launching hotglue. Please wait a few moments and retry.", "error")
+                                return;
+                            }
+
+                            const id = window.$crisp.get("user:email") || window.$crisp.get("session:identifier");
+
+                            if (!id) {
+                                window.swal("Error", "Uh-oh! There was an error launching hotglue. Please wait a few moments and retry.", "error")
+                                return;
+                            }
+
+                            HotGlue.show(id);
+                        }
+                    </script>
+                    <button class="btn btn-lg btn-primary" onclick="launchHG()">
+                        <span>Connect data</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Required vendor scripts (Do not remove) -->
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="assets/js/popper.min.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+<!-- Removes page load animation when window is finished loading -->
+<script type="text/javascript">
+    window.addEventListener("load", function () {
+        document.querySelector('body').classList.add('loaded');
+    });
+</script>
+
+</body>
+
+</html>
