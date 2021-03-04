@@ -1,0 +1,14 @@
+Title,Views,Reads,R/V,Claps,Fans,C/F,Date
+The future of data integration,1990,873,0.44,67,26,2.58,2021/2/11
+How to build a data integration pipeline without the massive tech debt,105,63,0.60,20,5,4.00,2021/1/26
+How to integrate Quickbooks with Python,188,57,0.30,5,4,1.25,2021/2/5
+How to integrate Salesforce with B2B apps,141,56,0.40,50,9,5.56,2021/1/28
+Should you build on Singer taps?,165,115,0.70,19,5,3.80,2021/1/26
+hotglue update vol.2,8,5,0.63,1,1,1.00,2021/1/26
+hotglue update vol.1,117,80,0.68,5,3,1.67,2020/9/3
+How to write ETL operations in Python,27201,11886,0.44,368,213,1.73,2020/4/28
+Introducing hotglue,280,154,0.55,104,6,17.33,2020/3/16
+"An Alternative Strategy for Solving ETL (extract, transform, load) for your Product",685,262,0.38,19,5,3.80,2019/8/15
+Why I used an embedded ETL tool for my B2B App,1356,614,0.45,29,13,2.23,2019/8/12
+Python Data Transformation Tools for ETL,56655,24562,0.43,486,226,2.15,2019/8/8
+Using Terraform with AWS Chalice,4944,2545,0.51,148,34,4.35,2019/7/29
