@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/demos/contacts/static/css/main.4042a453.chunk.css",
+    "main.js": "/demos/contacts/static/js/main.d70953f4.chunk.js",
+    "main.js.map": "/demos/contacts/static/js/main.d70953f4.chunk.js.map",
+    "runtime-main.js": "/demos/contacts/static/js/runtime-main.487163b2.js",
+    "runtime-main.js.map": "/demos/contacts/static/js/runtime-main.487163b2.js.map",
+    "static/css/2.00d0916d.chunk.css": "/demos/contacts/static/css/2.00d0916d.chunk.css",
+    "static/js/2.202820d4.chunk.js": "/demos/contacts/static/js/2.202820d4.chunk.js",
+    "static/js/2.202820d4.chunk.js.map": "/demos/contacts/static/js/2.202820d4.chunk.js.map",
+    "static/js/3.a8ba8e35.chunk.js": "/demos/contacts/static/js/3.a8ba8e35.chunk.js",
+    "static/js/3.a8ba8e35.chunk.js.map": "/demos/contacts/static/js/3.a8ba8e35.chunk.js.map",
+    "index.html": "/demos/contacts/index.html",
+    "static/css/2.00d0916d.chunk.css.map": "/demos/contacts/static/css/2.00d0916d.chunk.css.map",
+    "static/css/main.4042a453.chunk.css.map": "/demos/contacts/static/css/main.4042a453.chunk.css.map",
+    "static/js/2.202820d4.chunk.js.LICENSE.txt": "/demos/contacts/static/js/2.202820d4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.487163b2.js",
+    "static/css/2.00d0916d.chunk.css",
+    "static/js/2.202820d4.chunk.js",
+    "static/css/main.4042a453.chunk.css",
+    "static/js/main.d70953f4.chunk.js"
+  ]
+}
