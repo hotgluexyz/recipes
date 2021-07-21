@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/demos/app/static/css/main.4042a453.chunk.css",
-    "main.js": "/demos/app/static/js/main.98b511ac.chunk.js",
-    "main.js.map": "/demos/app/static/js/main.98b511ac.chunk.js.map",
-    "runtime-main.js": "/demos/app/static/js/runtime-main.35665be1.js",
-    "runtime-main.js.map": "/demos/app/static/js/runtime-main.35665be1.js.map",
+    "main.css": "/demos/app/static/css/main.6679f226.chunk.css",
+    "main.js": "/demos/app/static/js/main.2ad07af5.chunk.js",
+    "main.js.map": "/demos/app/static/js/main.2ad07af5.chunk.js.map",
+    "runtime-main.js": "/demos/app/static/js/runtime-main.ea438ab6.js",
+    "runtime-main.js.map": "/demos/app/static/js/runtime-main.ea438ab6.js.map",
     "static/css/2.00d0916d.chunk.css": "/demos/app/static/css/2.00d0916d.chunk.css",
-    "static/js/2.202820d4.chunk.js": "/demos/app/static/js/2.202820d4.chunk.js",
-    "static/js/2.202820d4.chunk.js.map": "/demos/app/static/js/2.202820d4.chunk.js.map",
-    "static/js/3.a8ba8e35.chunk.js": "/demos/app/static/js/3.a8ba8e35.chunk.js",
-    "static/js/3.a8ba8e35.chunk.js.map": "/demos/app/static/js/3.a8ba8e35.chunk.js.map",
+    "static/js/2.666eb9f9.chunk.js": "/demos/app/static/js/2.666eb9f9.chunk.js",
+    "static/js/2.666eb9f9.chunk.js.map": "/demos/app/static/js/2.666eb9f9.chunk.js.map",
+    "static/js/3.1647da98.chunk.js": "/demos/app/static/js/3.1647da98.chunk.js",
+    "static/js/3.1647da98.chunk.js.map": "/demos/app/static/js/3.1647da98.chunk.js.map",
     "index.html": "/demos/app/index.html",
     "static/css/2.00d0916d.chunk.css.map": "/demos/app/static/css/2.00d0916d.chunk.css.map",
-    "static/css/main.4042a453.chunk.css.map": "/demos/app/static/css/main.4042a453.chunk.css.map",
-    "static/js/2.202820d4.chunk.js.LICENSE.txt": "/demos/app/static/js/2.202820d4.chunk.js.LICENSE.txt"
+    "static/css/main.6679f226.chunk.css.map": "/demos/app/static/css/main.6679f226.chunk.css.map",
+    "static/js/2.666eb9f9.chunk.js.LICENSE.txt": "/demos/app/static/js/2.666eb9f9.chunk.js.LICENSE.txt",
+    "static/media/hotglue.f8814986.svg": "/demos/app/static/media/hotglue.f8814986.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.35665be1.js",
+    "static/js/runtime-main.ea438ab6.js",
     "static/css/2.00d0916d.chunk.css",
-    "static/js/2.202820d4.chunk.js",
-    "static/css/main.4042a453.chunk.css",
-    "static/js/main.98b511ac.chunk.js"
+    "static/js/2.666eb9f9.chunk.js",
+    "static/css/main.6679f226.chunk.css",
+    "static/js/main.2ad07af5.chunk.js"
   ]
 }
