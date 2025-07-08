@@ -1,0 +1,4 @@
+etl-output/
+snapshots/
+sync-output/
+.ipynb_checkpoints/
