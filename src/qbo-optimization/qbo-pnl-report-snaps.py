@@ -27,18 +27,18 @@ input = gs.Reader()
 
 # Get the report as a dataframe
 stream = "ProfitAndLossDetailReport"
-gl_report = input.get(stream, catalog_types=True)
+pnl_report = input.get(stream, catalog_types=True)
 
 
 # Get the snapped report data
-gl_report_snap = gs.read_snapshots(stream, SNAPSHOT_DIR)
+pnl_report_snap = gs.read_snapshots(stream, SNAPSHOT_DIR)
 
 # If we have a pre-existing snapshot and new incremental data, we'll need to combine them together
-snapshot_exists = gl_report_snap is not None and not gl_report_snap.empty
+snapshot_exists = pnl_report_snap is not None and not pnl_report_snap.empty
 
-if snapshot_exists and gl_report is not None and sync_type == "incremental_sync":
+if snapshot_exists and pnl_report is not None and sync_type == "incremental_sync":
     # Ensure the Date column is a date
-    gl_report_snap["Date"] = pd.to_datetime(gl_report_snap["Date"]).dt.date
+    pnl_report_snap["Date"] = pd.to_datetime(pnl_report_snap["Date"]).dt.date
     
     # Get today's date
     today = date.today()
@@ -48,22 +48,22 @@ if snapshot_exists and gl_report is not None and sync_type == "incremental_sync"
     
     # Drop the last 3 months of data (this is what the incremental sync brought in)
     print(f"Clearing snapped data newer than {first_day_of_lookback_period}")
-    gl_report_snap = gl_report_snap[gl_report_snap["Date"] < first_day_of_lookback_period]
+    pnl_report_snap = pnl_report_snap[pnl_report_snap["Date"] < first_day_of_lookback_period]
 
     # Convert snapped dates back to dt for consistency with sync output
-    gl_report_snap["Date"] = pd.to_datetime(gl_report_snap["Date"]).astype('datetime64[ns]')
+    pnl_report_snap["Date"] = pd.to_datetime(pnl_report_snap["Date"]).astype('datetime64[ns]')
     
-    # Combine with gl_report
+    # Combine with pnl_report
     print("Combining the incremental data with the snapshot data")
-    gl_report = pd.concat([gl_report_snap, gl_report])
+    pnl_report = pd.concat([pnl_report_snap, pnl_report])
 
-if gl_report is not None:
+if pnl_report is not None:
     # If the Date column is a date, turn it back to str
-    gl_report['Date'] = gl_report['Date'].astype(str)
+    pnl_report['Date'] = pnl_report['Date'].astype(str)
 
     # NOTE: We are passing overwrite=True because we are already stitching the snapshot with the incremental data above
-    gs.snapshot_records(gl_report, stream, SNAPSHOT_DIR, overwrite=True)
+    gs.snapshot_records(pnl_report, stream, SNAPSHOT_DIR, overwrite=True)
 
-# Write the final output (a full GL Report)
-gs.to_export(gl_report, stream, OUTPUT_DIR, export_format="parquet")
+# Write the final output (a full PNL Report)
+gs.to_export(pnl_report, stream, OUTPUT_DIR, export_format="parquet")
 
