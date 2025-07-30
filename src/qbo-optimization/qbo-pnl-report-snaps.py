@@ -16,6 +16,7 @@ OUTPUT_DIR = "./etl-output"
 # By default hotglue gets the last 2 periods + the current period
 LOOKBACK_PERIODS = 2
 
+# Get the report periods from the config file
 with open("config.json", "r") as f:
     config = json.load(f)
     LOOKBACK_PERIODS = config.get("report_periods", 2)
@@ -65,3 +66,4 @@ if gl_report is not None:
 
 # Write the final output (a full GL Report)
 gs.to_export(gl_report, stream, OUTPUT_DIR, export_format="parquet")
+
