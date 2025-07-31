@@ -19,7 +19,7 @@ LOOKBACK_PERIODS = 2
 # Get the report periods from the config file
 with open("config.json", "r") as f:
     config = json.load(f)
-    LOOKBACK_PERIODS = config.get("report_periods", 2)
+    LOOKBACK_PERIODS = config.get("report_periods", 3) - 1
 
 
 input = gs.Reader()
