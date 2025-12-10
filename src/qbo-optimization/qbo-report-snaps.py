@@ -46,7 +46,7 @@ if gl_report_snap is not None and gl_report is not None and sync_type == "increm
 # Snapshot the gl_report for future syncs
 if gl_report is not None:
     # If the Date column is a date, turn it back to str
-    gl_report['Date'] = gl_report['Date']..astype("string")
+    gl_report['Date'] = gl_report['Date'].astype("string")
 
     # NOTE: We are passing overwrite=True because we are already stitching the snapshot with the incremental data above
     gs.snapshot_records(gl_report, stream, SNAPSHOT_DIR, overwrite=True)

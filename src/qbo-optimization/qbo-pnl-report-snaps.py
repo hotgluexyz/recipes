@@ -59,7 +59,7 @@ if snapshot_exists and pnl_report is not None and sync_type == "incremental_sync
 
 if pnl_report is not None:
     # If the Date column is a date, turn it back to str
-    pnl_report['Date'] = pnl_report['Date']..astype("string")
+    pnl_report['Date'] = pnl_report['Date'].astype("string")
 
     # NOTE: We are passing overwrite=True because we are already stitching the snapshot with the incremental data above
     gs.snapshot_records(pnl_report, stream, SNAPSHOT_DIR, overwrite=True)
