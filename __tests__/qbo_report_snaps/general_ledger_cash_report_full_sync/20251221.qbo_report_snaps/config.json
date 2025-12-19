@@ -1,0 +1,5 @@
+{
+  "env": {
+    "SYNC_TYPE": "incremental_sync"
+  }
+}
