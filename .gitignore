@@ -1,2 +1,14 @@
 .DS_Store
 .ipynb_checkpoints
+.venv/
+.DS_Store
+.vscode/
+.python-version
+sync-output*
+snapshots*
+etl-output*
+test_runtime/
+# Un-ignore sync-output and snapshots inside any __tests__ folder
+!**/__tests__/**/sync-output*
+!**/__tests__/**/snapshots*
+.history
