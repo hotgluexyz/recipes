@@ -32,7 +32,7 @@ input = gs.Reader()
 
 # Get the report as a dataframe
 stream = "GeneralLedgerAccrualReport"
-gl_report = input.get(stream)
+gl_report = input.get(stream, catalog_types=True)
 has_incremental_data = gl_report is not None and not gl_report.empty
 gl_report_snap = gs.read_snapshots(stream, SNAPSHOT_DIR)
 has_snapshot_data = gl_report_snap is not None and not gl_report_snap.empty
